@@ -9,10 +9,11 @@ signed main(){
     cin>>n;
     int m = n;
     int r = 0, ar = 0;
+    int d = floor(log10(n))+1;
     while(n > 0)
     {
          r = n % 10;
-         ar = ar + (r * r * r);
+         ar += (int)pow(r,d);
          n = n / 10;
     }
     if(ar == m)
